@@ -1,0 +1,491 @@
+<HTML>
+
+<HEAD>
+
+<title>Signup</title>
+<style>
+				
+				
+				
+				body{
+						background-color:#F5FFFa;
+						
+					}
+
+					
+				hr{
+						color:white;
+						
+				 }
+
+				 
+				form{
+						position:absolute;
+						top:0px;
+						left:0px;
+					}
+
+		
+				.a {
+						text-decoration :none;	
+						color:white;
+						position:absolute;
+						top:315px;
+						left:90px;
+						font-family: Verdana;
+						font-size:22px;
+						font-weight:bolder;				
+							
+				  }
+
+	
+				#seg0{
+				
+						background-color:#ADD8E6;
+						width: 789px;
+						height: 1130px;
+						margin-left:70px;
+						margin-bottom:70px;
+						padding:30px;
+						
+					}
+
+							
+				#seg1{
+						position:absolute;
+						top:320px;
+						left:122px;
+						width: 613px; 
+						height: 71px;
+						background-color:#Dcdcdc;
+						padding:75px;
+					  }
+
+						 
+				#seg2{
+				 
+						position:absolute;
+						top:590px;
+						left:122px;
+						//padding:75;
+						padding:40px 300;
+						padding-left:5px;
+						background-color:#Dcdcdc;
+						width: 460px;
+						height:175px; 
+						
+
+					 }
+
+					 
+				#seg3{
+					  	position:absolute;
+						top:895px;
+						left:122px;
+						padding:5px 5;
+						
+						background-color:#Dcdcdc;
+						width: 750px;
+						height:520px;	 
+						
+					 }
+					 
+					 			
+						
+				  
+				  
+				.y{
+						color:#9379db;
+						font-family: Verdana;
+						font-size:22px;
+						font-weight:bolder;
+						margin-left:300px;
+				  }
+					 
+				.h{
+				
+						position:absolute;
+						top:0px;
+						left:0px;
+						color:white;
+						background-color:#708090;
+						width:227px;
+						font-size:18px;
+						font-family: arial;
+						text-indent:7px;
+						text-align:justify;
+					 
+						}
+
+				.b{
+						color:white;
+						position:absolute;
+						top:585px;
+						left:90px;
+						font-family: Verdana;
+						font-size:22px;
+						font-weight:bolder;
+						
+				  }
+				  
+				  .c{
+						color:white;
+						position:absolute;
+						top:890px;
+						left:90px;
+						font-family: Verdana;
+						font-size:22px;
+						font-weight:bolder;
+						
+				  }
+	
+	
+	
+</style>
+<script>
+
+
+function formvalidate()
+{
+	
+	
+	var nm=document.getElementById("n1");
+	if (nm.value==null || nm.value=="")
+ 	{ 
+		alert("Empty Name");
+		n1.focus();
+		return false;
+	}
+
+	nm=document.getElementById("n2");
+	if (nm.value==null || nm.value=="")
+	{ 
+		alert("Empty Last Name");
+		n2.focus();
+		return false;
+	}
+
+	nm=document.getElementById("g1");
+	if (nm.value=="-----------------Select-Gender---------------")
+	{ 
+		alert("Please select gender");
+		g1.focus();
+		return false;
+ 	}
+
+
+  	nm=document.getElementById("b1");
+ 	if (nm.value=="---Day---")
+ 	{ 
+		alert("Please select Day");
+   		b1.focus();
+   		return false;
+ 	}
+
+ 	nm=document.getElementById("b2");
+ 	if (nm.value=="---Month---")
+ 	{ 
+		alert("Please select Month");
+   		b2.focus();
+   		return false;
+ 	}
+
+  	nm=document.getElementById("b3");
+ 	if (nm.value=="---Year---")
+ 	{ 
+		alert("Please select Year");
+   		b3.focus();
+   		return false;
+ 	}
+
+	nm=document.getElementById("e1");
+	if (nm.value.match(/[^a-zA-Z0-9 ]/g))
+
+		nm.value ="";
+
+	if( nm.value=="" ||nm.value==null)
+	{ 
+		alert("please reenter Desire, E-mail ");
+   		e1.focus();
+   		return false;
+ 	}
+
+
+
+ 	nm=document.getElementById("p1");
+	var pass1=nm.value;
+ 	if (nm.value==null || nm.value=="")
+ 	{ 
+		alert("Please Enter Password");
+   		p1.focus();
+   		return false;
+ 	}
+	if(pass1.length<10)
+ 	{ 
+		alert("Password too short");
+   		p1.focus();
+   		return false;
+ 	}
+
+ 	nm=document.getElementById("p2");
+ 	if (nm.value==null || nm.value=="" || nm.value!=pass1)
+ 	{ 
+		alert("Please Re-enter Password");
+   		p2.focus();
+   		return false;
+ 	}
+	
+		nm=document.getElementById("e3");
+ 	if (nm.value==null || nm.value=="")
+ 	{ 
+         
+		alert("Please Enter Alternate Email");
+   		e3.focus();
+   		return false;
+ 	}
+
+
+	nm=document.getElementById("c1");
+ 	if (nm.value==null || nm.value=="")
+ 	{ 
+		alert("Please Enter country Name");
+   		c1.focus();
+   		return false;
+ 	}
+
+ 	nm=document.getElementById("c2");
+ 	if (nm.value==null || nm.value=="")
+ 	{ 
+		alert("Please Enter city Name");
+   		c2.focus();
+   		return false;
+ 	}
+
+ 	nm=document.getElementById("num");
+ 	var phn=nm.value;
+ 	if (nm.value==null || nm.value=="" )
+ 	{ 
+		alert("Please Enter contact number");
+   		num.focus();
+   		return false;
+ 	}
+	else if(phn.length<10 || isNaN(phn))
+ 	{ 
+		alert("Please Enter valid Contact number");
+   		num.focus();
+   		return false;
+ 	}
+/*	
+		else if(phn.charAt(0)!=7 || phn.charAt(0)!=8 phn.charAt(0)!=9 )
+ 	{ 
+		alert("number should start with 7/8/9");
+   		num.focus();
+   		return false;
+ 	}
+	*/
+	
+		nm=document.getElementById("code");
+ 	if (nm.value==null || nm.value=="")
+ 	{ 
+		alert("Please Enter The Code");
+   		code.focus();
+   		return false;
+ 	}
+
+
+
+
+
+ 	var x;
+    	if (confirm("Are You Sure To Submit Form?") == true) 
+	{
+	        
+	document.form1.action="welcome.html";
+	} 
+	else 
+	{
+ 	       x = "please fill out form correctly!";
+		document.write(x);
+ 	}
+
+	return true;
+
+}
+
+
+</script>
+
+</head>
+
+<BODY>
+
+<IMG src="images/in.jpg" width="200"height="80" hspace="30" vspace="40" border=0>
+<IMG src="images/yahoo-icon.jpg" align="right" width="40"height="40" hspace="80" vspace="50">
+
+<HR/>
+
+<BR>
+<P><SPAN class="y">Create a new Yahoo Account</SPAN></P>
+<BR>
+
+
+
+<DIV id="seg0">
+<SPAN class="a">1.</SPAN>
+
+<DIV id="seg1">
+
+
+<SPAN class="h">Personal Detail</SPAN>
+				<FORM name="form1" onsubmit="return formvalidate()">
+			<PRE>
+
+
+                    Name:   <INPUT type="textbox" size="15" id="n1" placeholder="First"> <INPUT type="textbox" size="15" id="n2" placeholder="Last">
+   
+	          Gender:   <SELECT size="1" id="g1">
+			<OPTION>-----------------Select-Gender---------------</OPTION>
+			<OPTION>male</OPTION>
+			<OPTION>female</OPTION>
+			</SELECT>			
+			
+                Birthday:   <SELECT size="1" id="b1">
+		  <OPTION>---Day---</OPTION>
+			<OPTION>01</OPTION>
+			<OPTION>02</OPTION>
+			<OPTION>03</OPTION>
+			<OPTION>04</OPTION>
+			<OPTION>05</OPTION>
+			<OPTION>06</OPTION>
+			<OPTION>07</OPTION>
+			<OPTION>08</OPTION>
+			<OPTION>09</OPTION>
+			<OPTION>10</OPTION>
+			<OPTION>11</OPTION>
+			<OPTION>12</OPTION>
+			<OPTION>13</OPTION>
+			<OPTION>14</OPTION>
+			<OPTION>15</OPTION>
+			<OPTION>16</OPTION>
+			<OPTION>17</OPTION>
+			<OPTION>17</OPTION>
+			<OPTION>18</OPTION>
+			<OPTION>19</OPTION>
+			<OPTION>20</OPTION>
+			<OPTION>21</OPTION>
+			<OPTION>22</OPTION>
+			<OPTION>23</OPTION>
+			<OPTION>24</OPTION>
+			<OPTION>25</OPTION>
+			<OPTION>26</OPTION>
+			<OPTION>27</OPTION>
+			<OPTION>28</OPTION>
+			<OPTION>29</OPTION>
+			<OPTION>30</OPTION>
+			<OPTION>31</OPTION>
+			</SELECT><SELECT size="1" id="b2"><OPTION>---Month---</OPTION>
+			<OPTION>jan</OPTION>
+			<OPTION>feb</OPTION>
+			<OPTION>mar</OPTION>
+			<OPTION>apr</OPTION>
+			<OPTION>may</OPTION>
+			<OPTION>jun</OPTION>
+			<OPTION>jul</OPTION>
+			<OPTION>aug</OPTION>
+			<OPTION>sep</OPTION>
+			<OPTION>oct</OPTION>
+			<OPTION>nov</OPTION>
+			<OPTION>dec</OPTION>
+
+			</SELECT><SELECT size="1" id="b3" required><OPTION>---Year---</OPTION>
+			<OPTION>1971</OPTION>
+			<OPTION>1972</OPTION>
+			<OPTION>1973</OPTION>
+			<OPTION>1974</OPTION>
+			<OPTION>1975</OPTION>
+			<OPTION>1976</OPTION>
+			<OPTION>1977</OPTION>
+			<OPTION>1978</OPTION>
+			<OPTION>1979</OPTION>
+			<OPTION>1980</OPTION>
+			<OPTION>1981</OPTION>
+			<OPTION>1982</OPTION>
+			<OPTION>1983</OPTION>
+			<OPTION>1984</OPTION>
+			<OPTION>1985</OPTION>
+			<OPTION>1986</OPTION>
+			<OPTION>1987</OPTION>
+			<OPTION>1989</OPTION>
+			<OPTION>1990</OPTION>
+			<OPTION>1991</OPTION>
+			<OPTION>1992</OPTION>
+			<OPTION>1993</OPTION>
+			<OPTION>1993</OPTION></SELECT>
+			
+			
+			
+			</pre></div>
+
+
+	<SPAN class="b">2.</SPAN>
+
+	<DIV id="seg2">
+	<SPAN class="h">Select an ID and password</SPAN>
+				
+	<PRE> Desired Yahoo! Email:      <INPUT type="textbox" size="15" id="e1">@<SELECT size="1" id="e2">
+			
+			<OPTION>yahoo.in</OPTION>
+			<OPTION>yahoo.com</OPTION>
+			<OPTION>ymail.com</OPTION>
+			<OPTION>rocketmail.com</OPTION>
+			</SELECT>
+			
+              Password:     <INPUT type="password" size="36"	maxlength="10" id="p1" >
+
+         Retype Password:   <INPUT type="password" size="36"	maxlength="10" id="p2" >
+	 
+ Alternate Email Address:   <INPUT type="email" size="36" id="e3">	 
+
+</pre>
+ 
+</DIV>
+		<SPAN class="c">3.</SPAN>
+		<DIV id="seg3">
+		
+<SPAN class="h">Address & Verification</SPAN> 
+		
+		<PRE>
+		
+		
+		 Country:   <INPUT type="text" size="36" id="c1">
+		
+		    City:   <INPUT type="text" size="36" id="c2">
+			
+	      Contact No:+91<INPUT type="text" size="35"  MaxLength=10 id="num">
+		  
+		  Verify:
+		  <IMG src="images/verify.jpg" width="239"height="50" hspace="81" vspace="0">
+		  
+     Type the code shown:   <INPUT type="text" size="36" id="code">
+	 
+	        <INPUT type="checkbox" name="Chk" value="ON" required>  I agree to the Yahoo! service agreement and privacy statement. 
+		
+		By clicking the “Create My Account” button below, 
+		I certify that I have read and agree to the Yahoo! Terms of Service, 
+		Yahoo! Privacy Policy and Communication Terms of Service, 
+		and to receive account related communications from Yahoo! electronically. 
+		To deliver product features, relevant advertising and abuse protection, 
+		Yahoo!’s automated systems scan and analyze all email, IM and other 
+		communications content.
+
+	                    <INPUT style="color: #7B0099" type="Submit"  value="Create My Account" >   <INPUT style="color: #7B0099"  type="reset" name="Reset" value="Reset">
+	
+
+	</PRE>
+	 </FORM>
+</DIV>
+		
+</DIV>
+</BODY>
+
+</HTML>
